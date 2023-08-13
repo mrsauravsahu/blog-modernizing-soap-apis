@@ -1,0 +1,11 @@
+sources:
+  - name: Countries
+    handler:
+      soap:
+        source: http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?wsdl
+
+    transforms:
+    - filterSchema:
+        filters:
+          - Query.CountryInfoService_CountryInfoService_CountryInfoServiceSoap12_ListOfLanguagesByName
+          - Mutation.CountryInfoService_CountryInfoService_CountryInfoServiceSoap12_FullCountryInfoAllCountries
