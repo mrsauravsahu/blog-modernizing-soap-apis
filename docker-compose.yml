@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  mesh:
+    image: node:18.17.1-alpine
+    working_dir: /app
+    volumes:
+      - ./src/mesh:/app
+    ports:
+      - "8080:4000"
+    command: npm run dev
